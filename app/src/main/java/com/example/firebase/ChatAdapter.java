@@ -30,8 +30,8 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatViewHolder
     @NonNull
     @Override
     public ChatViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View chater = LayoutInflater.from(mcontext).inflate(R.layout.example_item3,parent,false);
-        return new ChatViewHolder(chater);
+        View view = LayoutInflater.from(mcontext).inflate(R.layout.example_item3,parent,false);
+        return new ChatViewHolder(view);
     }
 
     @Override
@@ -40,9 +40,9 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatViewHolder
         holder.textView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent msg = new Intent(mcontext,Messaging.class);
-                msg.putExtra("reciever",stringArrayList2.get(position));
-                mcontext.startActivity(msg);
+                Intent intent = new Intent(mcontext,Messaging.class);
+                intent.putExtra("reciever",stringArrayList2.get(position));
+                mcontext.startActivity(intent);
             }
         });
 
