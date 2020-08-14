@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".LoginActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <ImageButton
+            android:id="@+id/back"
+            android:background="@color/colorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="10dp" />
+
+        <TextView
+            android:text="Login"
+            android:layout_marginLeft="40dp"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView1"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="160dp"
+
+        android:layout_height="wrap_content">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Email_Login_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        >
+
+        <EditText
+            android:id="@+id/Email_Login"
+            android:fontFamily="@font/montserrat_regular"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:hint="Username or Email"
+            android:padding="10dp"
+            android:textColorHint="@color/design_default_color_on_secondary" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Password_Login_text"
+        app:passwordToggleEnabled="true"
+
+        android:layout_marginTop="20dp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/Password_Login"
+            android:fontFamily="@font/montserrat_regular"
+
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:hint="Password"
+            android:padding="10dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/Login"
+        android:layout_width="300dp"
+        android:fontFamily="@font/montserrat_regular"
+        android:layout_height="60dp"
+
+        android:layout_marginTop="40dp"
+        android:background="@drawable/loginbutton_background"
+        android:text="Login"
+        android:textColor="@android:color/primary_text_light"
+       />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

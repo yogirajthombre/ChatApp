@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    tools:context=".Messaging">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:src="@drawable/ic_baseline_account_circle_24"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:padding="10dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+
+        <TextView
+            android:id="@+id/user"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="15sp"
+            android:textColor="@android:color/white"
+            android:text="User"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+
+
+        </LinearLayout>
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recylerview2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_above="@+id/bottom"
+        android:layout_below="@id/toolbar2"
+        android:layout_marginTop="10dp" />
+
+    <RelativeLayout
+        android:id="@+id/bottom"
+
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/send_message"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColor="@android:color/black"
+            android:hint="Type Your Message"
+            android:padding="10dp"
+
+
+
+
+
+            android:textColorHint="@android:color/black"
+
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/btn_send"
+            android:layout_width="match_parent"
+            android:minHeight="50dp"
+            android:layout_height="wrap_content"/>
+
+        <ImageButton
+            android:src="@drawable/ic_baseline_send_24"
+            android:id="@+id/btn_send"
+            android:background="@android:color/white"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+</RelativeLayout>

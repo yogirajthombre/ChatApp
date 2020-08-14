@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="5dp"
+
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:paddingRight="40dp"
+        android:paddingBottom="20dp">
+
+
+        <TextView
+            android:id="@+id/senders"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_right"
+            android:fontFamily="@font/montserrat_regular"
+            android:padding="10dp"
+
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

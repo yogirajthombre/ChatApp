@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+
+
+    android:layout_height="match_parent"
+    tools:context=".MainActivity3">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/Settings_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:background="@color/colorPrimary"
+
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="10dp" />
+
+
+
+        <TextView
+            android:text="Settings"
+            android:fontFamily="@font/montserrat_regular"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:layout_marginLeft="30dp"
+            android:textColor="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/account_pic"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_baseline_account_circle_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Settings_bar" />
+
+    <TextView
+        android:text="+AddAProfilePic"
+        android:id="@+id/Add_Photo"
+        android:textColor="@android:color/black"
+        android:fontFamily="@font/montserrat_bold"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/account_pic"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Add_Photo"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"
+            android:text="Username"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/account_username"
+            android:text="Name"
+            android:fontFamily="@font/montserrat_regular"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="20dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="20dp"
+
+
+            android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"
+            android:text="Email "
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+
+        <TextView
+            android:id="@+id/account_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="Email Account " />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="130dp"
+        android:background = "@drawable/loginbutton_background"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Logout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.895" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

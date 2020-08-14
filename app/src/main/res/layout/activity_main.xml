@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+
+            android:layout_height="wrap_content"
+            android:text="MyChat"
+            android:textColor="@android:color/white"
+            android:textSize="27sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="40dp"
+            tools:layout_editor_absoluteY="11dp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/createAccount"
+        android:fontFamily="@font/montserrat_regular"
+
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Create Account "
+        android:textColor="#100E0E"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createAccount"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_height="wrap_content">
+
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Name_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+     >
+
+
+        <EditText
+            android:id="@+id/Name"
+            android:fontFamily="@font/montserrat_regular"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:hint="UserName"
+            android:padding="10dp"
+
+            android:textColorHint="@color/design_default_color_on_secondary" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Email_Text"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+       >
+
+        <EditText
+            android:id="@+id/Email"
+            android:fontFamily="@font/montserrat_regular"
+
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:hint="Email"
+            android:padding="10dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Password_Text"
+
+
+        android:layout_marginTop="20dp"
+        app:passwordToggleEnabled="true"
+
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/Password"
+            android:fontFamily="@font/montserrat_regular"
+            android:layout_width="300dp"
+
+            android:layout_height="60dp"
+            android:hint="Password"
+            android:padding="10dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/Register"
+        android:fontFamily="@font/montserrat_regular"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:background = "@drawable/loginbutton_background"
+
+        android:text="Register"
+
+  />
+
+
+
+</LinearLayout>
+
+    <TextView
+        android:id="@+id/AlreadyMember"
+        android:fontFamily="@font/montserrat_regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="24dp"
+        android:text="Already A Member ?"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear1" />
+
+    <TextView
+        android:id="@+id/LoginPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginRight="92dp"
+
+        android:fontFamily="@font/montserrat_regular"
+        android:text="Login"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear1" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
