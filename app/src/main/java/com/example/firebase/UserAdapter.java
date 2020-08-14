@@ -55,7 +55,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
                     public void run() {
                         Intent intent = new Intent(mContext,Messaging.class);
                         intent.putExtra("reciever",stringArrayList.get(position));
-                        mContext.startActivity(msg);
+                        mContext.startActivity(intent);
                         super.run();
                     }
 
