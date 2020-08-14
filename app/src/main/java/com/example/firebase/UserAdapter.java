@@ -31,8 +31,8 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
     @NonNull
     @Override
     public UserViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View vrt = LayoutInflater.from(parent.getContext()).inflate(R.layout.example_item,parent,false);
-        return new UserViewHolder(vrt);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.example_item,parent,false);
+        return new UserViewHolder(view);
     }
 
     @Override
@@ -53,8 +53,8 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
                 new Thread(){
                     @Override
                     public void run() {
-                        Intent msg = new Intent(mContext,Messaging.class);
-                        msg.putExtra("reciever",stringArrayList.get(position));
+                        Intent intent = new Intent(mContext,Messaging.class);
+                        intent.putExtra("reciever",stringArrayList.get(position));
                         mContext.startActivity(msg);
                         super.run();
                     }
