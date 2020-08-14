@@ -25,7 +25,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatViewHolder
 
     Context mcontext;
     ArrayList<String> stringArrayList2;
-    ArrayList<String> last_messages = new ArrayList<String>();
+  
 
     @NonNull
     @Override
