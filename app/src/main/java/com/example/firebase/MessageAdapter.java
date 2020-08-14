@@ -42,11 +42,11 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
     }
 
     public static class MessageViewHolder extends RecyclerView.ViewHolder {
-        TextView send_msg;
+        TextView send_message;
 
         public MessageViewHolder(@NonNull View itemView) {
             super(itemView);
-            send_msg = itemView.findViewById(R.id.senders);
+            send_message = itemView.findViewById(R.id.senders);
 
 
         }
@@ -57,12 +57,12 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
     @Override
     public MessageViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         if (viewType == MSG_RIGHT){
-            View vert = LayoutInflater.from(parent.getContext()).inflate(R.layout.example_item1,parent,false);
-            return new MessageAdapter.MessageViewHolder(vert);
+            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.example_item1,parent,false);
+            return new MessageAdapter.MessageViewHolder(view);
 
         }else {
-            View vert = LayoutInflater.from(parent.getContext()).inflate(R.layout.example_item2,parent,false);
-            return new MessageAdapter.MessageViewHolder(vert);
+            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.example_item2,parent,false);
+            return new MessageAdapter.MessageViewHolder(view);
 
         }
 
@@ -71,7 +71,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
     @Override
     public void onBindViewHolder(@NonNull MessageViewHolder holder, int position) {
 
-        holder.send_msg.setText(chatarraylist.get(position).getMessage_Chat());
+        holder.send_message.setText(chatarraylist.get(position).getMessage_Chat());
 
 
     }
