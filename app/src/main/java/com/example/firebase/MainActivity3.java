@@ -159,8 +159,7 @@ public class MainActivity3 extends AppCompatActivity {
                 reference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                     @Override
                     public void onSuccess(final Uri uri) {
-                        Toast.makeText(MainActivity3.this,"Yes",Toast.LENGTH_LONG).show();
-                        Toast.makeText(MainActivity3.this,uri.toString(),Toast.LENGTH_LONG).show();
+              
 
                         sharedPreferences.edit().putString("profile_image_url",uri.toString());
 
@@ -168,11 +167,11 @@ public class MainActivity3 extends AppCompatActivity {
                         databaseReference.addValueEventListener(new ValueEventListener() {
                             @Override
                             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                Toast.makeText(getApplicationContext(),String.valueOf(dataSnapshot.getChildrenCount()),Toast.LENGTH_LONG).show();
+                               
                                 for (int a = 0;a<dataSnapshot.getChildrenCount();a++){
                                    String name = dataSnapshot.child(String.valueOf(a)).child("name").getValue(String.class);
                                    if (name.equals(sharedPreferences.getString("Username",null))){
-                                       Toast.makeText(getApplicationContext(),"Yesssss",Toast.LENGTH_LONG).show();
+                                      
                                        databaseReference.child(String.valueOf(a)).child("imageUrl").setValue(uri.toString());
                                        break;
 
